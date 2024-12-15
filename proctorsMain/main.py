@@ -50,7 +50,7 @@ def load_module_from_file(file_path, module_name):
         return None
 
 # Main function to check files
-def check_student_files(test_cases = {}):
+def check_student_files(test_cases = [[], []]):
 
     RED = "\033[91m"   # ANSI code for red text
     RESET = "\033[0m"  # ANSI code to reset text color
@@ -107,8 +107,12 @@ def print_messages(messages):
         if not student_results:
             continue
         print()
-        for message in student_results:
-            print(f"{RED if 'Failed' in message else GREEN}{message}{RESET}")
+        if (0 < len(student_results)):
+            print(f"{GREEN if 'Success' in student_results[0] else RED}{student_results[0]}{RESET}")
+        if (2 < len(student_results)):
+            print("...")
+        if (1 < len(student_results)):
+            print(f"{GREEN if 'Success' in student_results[-1] else RED}{student_results[-1]}{RESET}")
     print("--------------------------------------------------")
 
 
