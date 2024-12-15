@@ -30,8 +30,11 @@ def task1 (initialString: str) -> str:
 
 def task2(val : int) -> str:
     """
-    Perform a calculation: multiply value by 4 and add 20 to the result.
+    Perform a calculation: multiply input by 4 and add 20 to the result.
     Return the final value.
+
+    Parameters:
+    val (int) : a random real nubmer
 
     Returns:
     str: result of the calculation.
@@ -180,7 +183,7 @@ def task9(n: int) -> str:
     Check if the given number is a prime number.
 
     Parameters:
-    n (int): a number to check.
+    n (int): a positive number to check.
 
     Returns:
     str: True if the number is prime, False otherwise.
@@ -317,14 +320,14 @@ def task15(a: int, b: int) -> str:
     finally:
         return result
     
-def task16(a: int, b: int, c: int) -> str:
+def task16(first: int, second: int, third: int) -> str:
     """
     Check if the numbers form a Pythagorean triplet.
 
     Parameters:
-    a (int): first side.
-    b (int): second side.
-    c (int): third side.
+    first (int): first side.
+    secodn (int): second side.
+    third (int): third side.
 
     Returns:
     str: "True" if the numbers form a Pythagorean triplet, otherwise "False".
