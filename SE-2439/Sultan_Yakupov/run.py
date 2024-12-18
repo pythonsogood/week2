@@ -9,7 +9,7 @@ def prerequisites () :
 	"""
 	return True
 
-def task1 (initialString: str) -> str:
+def task1(initialString: str) -> str:
 	"""
 	This function should return the updated string by adding your fullName to it.
 
@@ -21,9 +21,9 @@ def task1 (initialString: str) -> str:
 	"""
 	newString = None
 	# Perform the task below, change the code inside the try block.:
-	try :
+	try:
 		# newString = int("Create new string as a concatenation of old string and your full name")
-		newString = initialString + "Sultan Yakupov"
+		newString = f"{initialString}Sultan Yakupov"
 	except:
 		newString = "Error"
 	finally:
@@ -134,7 +134,7 @@ def task6(n: int) -> str:
 	# Perform the task below, change the code inside the try block.:
 	try :
 		# result = int("Calculate the sum of the first n natural numbers")
-		result = str(sum(range(1, n+1)))
+		result = str((1+n)*n//2) # O(1) answer arithmetic progression formula
 	except:
 		result = "Error"
 	finally:
@@ -157,20 +157,20 @@ def task7(n: int) -> str:
 	try :
 		# freq = int("Count the frequency of each digit in the number")
 		names = {
-			1: "one",
-			2: "two",
-			3: "three",
-			4: "four",
-			5: "five",
-			6: "six",
-			7: "seven",
-			8: "eight",
-			9: "nine",
-			0: "zero"
+			"1": "one",
+			"2": "two",
+			"3": "three",
+			"4": "four",
+			"5": "five",
+			"6": "six",
+			"7": "seven",
+			"8": "eight",
+			"9": "nine",
+			"0": "zero"
 		}
-		digits = [int(i) for i in str(n)]
-		digits_unique = set(digits)
-		freq = "".join([f"{names.get(digit, "zero")}{digits.count(digit)}" for digit in digits_unique])
+		digits = list(str(n))
+		digits_unique = sorted(set(digits), key=lambda x: int(x))
+		freq = "".join([f"{names[digit]}{digits.count(digit)}" for digit in digits_unique])
 	except:
 		freq = "Error"
 	finally:
@@ -178,7 +178,7 @@ def task7(n: int) -> str:
 
 def task8(password: str) -> str:
 	"""
-	Check if the given password meets the criteria:
+	Check2 if the given password meets the criteria:
 	- At least 8 characters long.
 	- Contains at least one digit.
 
@@ -193,7 +193,8 @@ def task8(password: str) -> str:
 	is_valid = None
 	# Perform the task below, change the code inside the try block.:
 	try :
-		is_valid = int("Check if the password meets the criteria")
+		# is_valid = int("Check if the password meets the criteria")
+		is_valid = str(len(password) >= 8 and any(i.isdigit() for i in password))
 	except:
 		is_valid = "Error"
 	finally:
@@ -213,8 +214,8 @@ def task9(n: int) -> str:
 	# Hint: try to devide the number by all numbers from 2 to n-1, if it is divisible by any of them, then it is not a prime number.
 
 	# Perform the task below, change the code inside the try block.:
-	try :
-		result = int("Check if the number is prime or not")
+	try:
+		result = next(("False" for i in range(2, int(n**0.5)+1) if n % i == 0), "True")
 	except:
 		result = "Error"
 	finally:
@@ -235,7 +236,8 @@ def task10(n: int) -> str:
 
 	# Perform the task below, change the code inside the try block.:
 	try :
-		result = int("Check if the number is palindrome or not")
+		# result = int("Check if the number is palindrome or not")
+		result = str(str(n) == str(n)[::-1])
 	except:
 		result = "Error"
 	finally:
@@ -254,8 +256,9 @@ def task11(start: int, end: int) -> str:
 	"""
 	count = None
 	# Perform the task below, change the code inside the try block.:
-	try :
-		count = int("Count how many numbers are divisible by 5")
+	try:
+		# count = int("Count how many numbers are divisible by 5")
+		count = str(sum(i % 5 == 0 for i in range(start, end+1)))
 	except:
 		count = "Error"
 	finally:
@@ -275,7 +278,8 @@ def task12(a: int, b: int) -> str:
 	is_greater = None
 	# Perform the task below, change the code inside the try block.:
 	try :
-		is_greater = int("Check if the sum of the two numbers is greater than 50")
+		# is_greater = int("Check if the sum of the two numbers is greater than 50")
+		is_greater = str(a + b > 50)
 	except:
 		is_greater = "Error"
 	finally:
@@ -296,7 +300,8 @@ def task13(a: int, b: int, c: int) -> str:
 	largest = None
 	# Perform the task below, change the code inside the try block.:
 	try :
-		largest = int("Find the largest number among the three numbers")
+		# largest = int("Find the largest number among the three numbers")
+		largest = str(max(a, b, c))
 	except:
 		largest = "Error"
 	finally:
@@ -315,7 +320,8 @@ def task14(number: int) -> str:
 	result = None
 	# Perform the task below, change the code inside the try block.:
 	try :
-		result = int("Check if the number is positive, negative, or zero")
+		# result = int("Check if the number is positive, negative, or zero")
+		result = "Positive" if number > 0 else "Negative" if number < 0 else "Zero"
 	except:
 		result = "Error"
 	finally:
@@ -335,7 +341,8 @@ def task15(a: int, b: int) -> str:
 	result = None
 	# Perform the task below, change the code inside the try block.:
 	try :
-		result = int("Check if the first number is divisible by the second number")
+		# result = int("Check if the first number is divisible by the second number")
+		result = str(a % b == 0)
 	except:
 		result = "Error"
 	finally:
@@ -359,7 +366,8 @@ def task16(first: int, second: int, third: int) -> str:
 
 	# Perform the task below, change the code inside the try block.:
 	try :
-		result = int("Check if the numbers form a Pythagorean triplet")
+		# result = int("Check if the numbers form a Pythagorean triplet")
+		result = str(first**2 + second**2 == third**2)
 	except:
 		result = "Error"
 	finally:
@@ -380,7 +388,11 @@ def task17(number: int) -> str:
 	factorial = None
 	# Perform the task below, change the code inside the try block.:
 	try :
-		factorial = int("Calculate the factorial of the number")
+		# factorial = int("Calculate the factorial of the number")
+		factorial = 1
+		for i in range(1, number+1):
+			factorial *= i
+		factorial = str(factorial)
 	except:
 		factorial = "Error"
 	finally:
@@ -397,7 +409,8 @@ def task18() -> str:
 	answer = None
 	# Perform the task below, change the code inside the try block.:
 	try :
-		answer = int("Solve the riddle")
+		# answer = int("Solve the riddle")
+		answer = "7"
 	except:
 		answer = "Error"
 	finally:
@@ -415,8 +428,16 @@ def task19(x: int) -> str:
 	"""
 	result = None
 	# Perform the task below, change the code inside the try block.:
-	try :
-		result = int("Calculate the sum of all even numbers from 1 to x")
+	try:
+		# result = int("Calculate the sum of all even numbers from 1 to x")
+		result = str(sum(range(2, x+1, 2)))
+		"""
+		or ofc
+		result = 0
+		for i in range(2, x+1, 2):
+			result += i
+		result = str(result)
+		"""
 	except:
 		result = "Error"
 	finally:
@@ -442,7 +463,8 @@ def task20(secret_number: int, guess: int) -> str:
 
 	# Perform the task below, change the code inside the try block.:
 	try :
-		result = int("Return comands")
+		# result = int("Return comands")
+		result = "Too High" if guess > secret_number else "Too Low" if guess < secret_number else "Correct!"
 	except:
 		result = "Error"
 	finally:
