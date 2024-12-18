@@ -6,8 +6,53 @@ import testCases.loading as ltc
 # List of allowed file names
 allowedFileNames = {
     "testingFolder": ["Angsar_Aidarbek", "Unknown_Profile"],
-    "SE-2437": [],
-    "SE-2439": []
+    "SE-2437": [
+        "Baisal_Alym",
+        "Alisher_Assanov",
+        "Ardak_Avissauly",
+        "Aisulu_Azimkhan",
+        "Bibifatima_Bisesheva",
+        "Alikhan_Bizhanov",
+        "Muhtarali_Duysenbay",
+        "Islam_Imanbayev",
+        "Medina_Klyumova",
+        "Ivan_Kuznetsov",
+        "Dias_Madyshev",
+        "Sarah_Mukhammad",
+        "Raiymbek_Mussin",
+        "Ataniyaz_Mutigolla",
+        "Alikhan_Nauanov",
+        "Ibrahim_Nygyman",
+        "Yeskendir_Salimov",
+        "Muslim_Syzdikov",
+        "Dias_Tursynbai",
+        "Zhanibek_Yksak",
+        "Shugyla_Zhaxylykova",
+        "Beibarys_Zhumagali"
+    ],
+    "SE-2439": [
+        "Sultan_Agibaev",
+        "Yerassyl_Aman",
+        "Alisher_Askar",
+        "Gaziza_Bakir",
+        "Ramazan_Bisembay",
+        "Zhadyrassyn_Imangali",
+        "Alikhan_Kulzhanov",
+        "Elkham_Mamedov",
+        "Almat_Muzdybay",
+        "Miras_Omar",
+        "Ilnur_Saipiyev",
+        "Merkhan_Samat",
+        "Aizada_Sembayeva",
+        "Yernur_Syrlibayev",
+        "Assel_Tynysbek",
+        "Erasyl_Umirbay",
+        "Sultan_Yakupov",
+        "Shynbergen_Yegizbayev",
+        "Aiya_Zhakupova",
+        "Nurdan_Zhanabayev",
+        "Nurzhiğit_Zhunis"
+    ]
 }
 
 # Root directory and subdirectories
