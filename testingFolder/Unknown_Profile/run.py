@@ -44,7 +44,7 @@ def task2(val : int) -> str:
     # Perform the task below, change the code inside the try block.:
     try : 
         # Even though the result is int, you should return it as a string.
-        result = str("20")
+        result = int("Perform the calculation in single line!")
     except:
         result= "Error"
     finally:
