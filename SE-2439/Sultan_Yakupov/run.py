@@ -168,8 +168,9 @@ def task7(n: int) -> str:
 			9: "nine",
 			0: "zero"
 		}
-		digits = list(str(n))
-		freq = ""
+		digits = [int(i) for i in str(n)]
+		digits_unique = set(digits)
+		freq = "".join([f"{names.get(digit, "zero")}{digits.count(digit)}" for digit in digits_unique])
 	except:
 		freq = "Error"
 	finally:
