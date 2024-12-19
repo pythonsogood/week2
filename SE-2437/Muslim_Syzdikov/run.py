@@ -15,6 +15,5 @@ def prerequisites():
         print(f"Prerequisite check failed: {e}")
         return False
 
-
 if __name__ == "__main__":
     prerequisites()
